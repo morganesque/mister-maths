@@ -1,1 +1,149 @@
-hello this is a test
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
+
+<head id="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Carys Maths</title>
+    <meta name="title" content="Carys Maths">
+    <meta name="description" content="A quick iPad app for maths learning.">	
+    <meta name="google-site-verification" content="">
+    <meta name="author" content="Tom Morgan - morganesque.com">
+    <meta name="Copyright" content="Copyright Tom Morgan 2012. All Rights Reserved.">
+    <meta name="DC.title" content="Carys Maths">
+    <meta name="DC.subject" content="A quick iPad app for maths learning.">
+    <meta name="DC.creator" content="Tom Morgan - morganesque.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+<div class="ipad">
+    
+    <div id="settings" class="pane">        
+        <div class="numbers">
+            <a class="option chosen" href="#">2</a>
+            <a class="option" href="#">3</a>
+            <a class="option" href="#">4</a>                
+            <a class="option" href="#">5</a>
+            <a class="option" href="#">6</a>
+            <a class="option" href="#">7</a>
+            <a class="option" href="#">8</a>
+            <a class="option" href="#">9</a>
+            <a class="option" href="#">10</a>
+            <a class="option chosen" href="#">11</a>
+            <a class="option" href="#">12</a>
+        </div><!-- .numbers -->
+        <div class="operations">
+            <a class="option" href="#" data-operation="add">+</a>
+            <a class="option" href="#" data-operation="sub">-</a>
+            <a class="option chosen" href="#" data-operation="mul">&#215;</a>                
+            <a class="option" href="#" data-operation="div">&#247;</a>
+        </div><!-- .numbers -->
+        <a href="#" id="save" class="save">save</a><!-- .save -->
+    </div><!-- .settings -->
+    
+    <div id="game" class="pane">
+
+        <div class="characters">
+            <div class="char1"></div><!-- .char1 -->
+            <div class="char2"></div><!-- .char2 -->
+            <div class="char3"></div><!-- .char3 -->
+            <div class="char4"></div><!-- .char4 -->
+            <div class="char5"></div><!-- .char5 -->
+            <div class="char6"></div><!-- .char6 -->
+            <div class="char7"></div><!-- .char7 -->
+            <div class="char8"></div><!-- .char8 -->
+            <div class="char9"></div><!-- .char9 -->
+            <div class="char10"></div><!-- .char10 -->
+            <div class="char11"></div><!-- .char11 -->
+            <div class="char12"></div><!-- .char12 -->
+            <div class="char13"></div><!-- .char13 -->
+            <div class="char14"></div><!-- .char14 -->
+            <div class="char15"></div><!-- .char15 -->
+            <div class="char16"></div><!-- .char16 -->
+            <div class="char17"></div><!-- .char17 -->
+            <div class="char18"></div><!-- .char18 -->
+            <div class="char19"></div><!-- .char19 -->
+            <div class="char20"></div><!-- .char20 -->
+        </div><!-- .characters -->
+        
+        <div class="qa">
+            <p id="question" class="question"></p>
+            <p id="answer" class="answer"></p>            
+        </div><!-- .qa -->
+        
+        <div class="welcome">
+            <p class="head">instructions</p>
+            <p>A question will<br />appear below</p>
+            <p>Use the numbers<br />to type the answer</p>
+            <p>Then click the green button for another question</p>
+            <a id="start-button" href="#">start</a>
+        </div><!-- .welcome -->
+        
+        <p class="score"><span id="score">0</span></p>
+        
+        <p id="feedback" class="feedback red hidden"></p>
+        
+        <div class="keyboard">
+            <a href="#" class="key" id="one">1</a><!-- .key 
+            --><a href="#" class="key" id="two">2</a><!-- .key
+            --><a href="#" class="key" id="tre">3</a><!-- .key
+            --><a href="#" class="key" id="for">4</a><!-- .key
+            --><a href="#" class="key" id="fiv">5</a><!-- .key
+            --><a href="#" class="key" id="six">6</a><!-- .key
+            --><a href="#" class="key" id="sev">7</a><!-- .key
+            --><a href="#" class="key" id="eig">8</a><!-- .key
+            --><a href="#" class="key" id="nin">9</a><!-- .key
+            --><a href="#" class="key again" id="again"><img src="img/again.png" width="27" height="23" alt="Again"></a><!-- .key
+            --><a href="#" class="key" id="zer">0</a><!-- .key
+            --><a href="#" class="key" id="del">&lt;</a><!-- .key -->
+        </div><!-- .keyboard -->
+        
+        <a href="#" id="cog" class="cog">settings</a><!-- .help -->
+    </div><!-- .game -->
+    
+</div><!-- .ipad -->   
+
+<div id="orient" class="pane">
+    <p class="center-message"><img src="img/rotate.png" width="136" height="135" alt="Rotate"><br /><br /><span></span></p>
+</div><!-- .orient -->
+
+<div id="loading" class="pane">    
+    <p class="center-message"><img src="img/loading.gif" width="31" height="31" alt="Loading"><br /><br />Loading...</p>
+</div><!-- .orient -->
+
+<pre class="debug">DEBUG!</pre><!-- .debug -->
+
+<script type="text/javascript" src="js/all.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+
+<!-- <script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-REPLACE-THIS']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>-->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="js/ie/DOMAssistantCompressed-2.8.js"></script>
+<script src="js/ie/selectivizr-1.0.1.js"></script>
+<script src="js/ie/respond.min.js"></script>
+<![endif]-->
+
+</body>
+</html>

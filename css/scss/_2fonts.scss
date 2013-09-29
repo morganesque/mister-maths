@@ -1,0 +1,78 @@
+html {
+    font-size:16px;
+    line-height:1.5em;
+    font-family: 'Days One', sans-serif;
+}
+
+@mixin fontAlpha {
+    font-size:48px; font-size:3rem; /* 48/16 */
+    font-style:normal;
+    font-weight:normal;    
+    letter-spacing:-0.076em;
+    text-shadow:1px 1px 1px #FFF;
+    margin-bottom:0.5em; /* 24 */
+    line-height:1em; /* 48 */    
+}
+
+h1, .alpha {
+    @include fontAlpha;
+}
+
+@mixin fontBeta {
+    font-size:40px; font-size:2.5rem; /* 40/16 */
+    font-style:normal;
+    font-weight:normal;
+    text-shadow:1px 1px 1px #FFF;
+    margin-bottom:.6em; /* 24/40 */
+    line-height:1.2em; /* 48/40 */ 
+}
+
+h2, .beta {
+    @include fontBeta;
+}
+
+@mixin fontGamma {
+    font-size:32px; font-size:2rem; /* 32/16 */
+    font-style:normal;
+    font-weight:400;
+    text-shadow:1px 1px 1px #FFF;
+    margin-bottom:.75em; /* 24/32 */
+    line-height:1.5em; /* 48/32 */    
+}
+
+h3, .gamma {  
+    @include fontGamma;
+}
+
+@mixin fontDelta {
+    font-size:24px; font-size:1.5rem; /* 32/16 */
+    font-style:normal;
+    font-weight:400;
+    text-shadow:1px 1px 1px #FFF;
+    margin-bottom:1em; /* 24/24 */
+    line-height:1em; /* 24/24 */    
+}
+
+h4,.delta   {
+    @include fontDelta;
+}
+
+@mixin fontEpsilon {
+    font-size:14px; font-size:.875rem; /* 14/16 */
+    font-style:normal;
+    font-weight:400;
+    margin-bottom:1em; /* 24 */
+    line-height:1em; /* 24 */    
+}
+h5,.epsilon {
+    @include fontEpsilon;
+}
+
+h6,.zeta    {
+    
+}
+
+#respond h3 {
+    margin-bottom:0;
+}
+

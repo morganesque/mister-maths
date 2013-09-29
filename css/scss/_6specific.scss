@@ -1,0 +1,217 @@
+.ipad {
+    position:relative;
+    margin:20px auto 0;
+    padding:0;
+    background: transparent url('../../img/texture.jpg') repeat scroll left top;
+    width:768px;
+    height:1004px;
+    overflow:hidden;
+}
+
+.pane {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:768px;
+    height:1004px;
+    background-color:rgba(255,255,255,0.76);;
+}
+
+#game {
+}
+
+.keyboard {
+    position:absolute;
+    bottom:20px;
+    left:200px;
+    width:370px;
+    @include inline-block-parent();
+    text-align:center;
+    background-color:rgba(0,0,0,0.2);
+    @include border-radius(16px);
+    
+    .key {
+        display:block;
+        width:100px;
+        height:62px;
+        line-height:62px;
+        vertical-align:middle;
+        text-align:center;
+        font-size:32px;
+        margin:10px;
+        @include inline-hack();
+        background-color:rgba(255,255,255,0.76);
+        @include border-radius(8px);
+        @include single-box-shadow(#999, 1px, 1px, 5px, 0px, false);
+        
+        &:active {
+            background:rgba(0,0,255,0.76);
+        }
+    }
+    
+    .again {
+        visibility:hidden;
+        background-color:#94FF00;
+    }
+}
+
+.blocked .key:active {
+    background:rgba(255,0,0,0.76);
+}
+
+.hidden {display:none;}
+
+.score {
+    float:right;
+    padding:0.5em;
+}
+
+.question {
+    text-align:center;
+    margin-bottom:1em;
+    white-space:nowrap;    
+}
+.answer {
+    font-size:4em;
+    width:3em;
+    height:1em;
+    background:white;
+    border:1px solid rgba(0,0,0,0.42);;
+    margin:0 159px;
+    padding:0.12em 0.25em;
+    letter-spacing:0.1em;
+    text-align:center;
+    @include border-radius(5px);
+}
+
+.feedback {
+    text-align:center;
+    margin-top:20px;
+}
+
+#settings {
+    position:absolute;
+    top:0px;
+    left:0px;
+    
+    &>div {
+        top:100px;
+    }
+}
+
+.option {
+
+    display:block;
+    position:relative;
+    width:200px;
+    padding:0px 32px;
+    margin-bottom:16px;
+    height:64px;
+    line-height:64px;
+    background:rgba(0,0,0,0.21);
+    border:1px solid rgba(0,0,0,0.21);
+            
+    &.chosen {
+        background-color:white;
+    }
+}
+
+.numbers {
+    position:absolute;
+    top:0px;
+    left:0px;
+
+    a {
+        left:-190px;
+        @include border-radius(0px 32px 32px 0px);
+        text-align:right;
+        
+        &.chosen {
+            left:-150px;
+        }
+    }
+}
+
+.operations {
+    position:absolute;
+    right:0px;
+    top:0px;
+    a {
+        left:200px;
+        @include border-radius(32px 0px 0px 32px);
+        text-align:left;        
+        
+        &.chosen {
+            left:160px;
+        }
+    }
+}
+
+.qa {
+    position:absolute;
+    top:380px;
+    left:0px;
+}
+.save,
+.cog {
+    position:absolute;
+    bottom:15px;right:15px;
+    width:60px;height:20px;
+    background: transparent url('../../img/settings.png') no-repeat scroll center top;
+    
+    text-align:center;
+    font-size:0.45em;
+    padding:60px 10px 0px;
+    
+    @include border-radius(15px);
+}
+
+#orient {
+    width:100%;
+    height:100%;
+//    background-color:red;
+    background-color:rgba(0,0,0,0.95);;
+    color:white;
+    display:none;
+}
+#loading {
+    width:100%;
+    height:100%;
+//    background-color:red;
+    background-color:rgba(0,0,0,0.95);;
+    color:white;
+}
+
+.center-message {
+    text-align:center;
+    margin-top:250px;
+}
+
+.welcome {
+    position:absolute;
+    left:197px;
+    top:40px;
+    width:374px;
+    height:312px;
+    font-size:0.8em;
+    text-align:center;
+    
+    p {
+        color:#666;
+        
+        &.head {
+            color:black;
+            text-transform:uppercase;
+            margin-bottom:0.75em;
+        }
+    }
+}
+#start-button {
+    display:block;
+    width:120px;
+    height:30px;
+    padding:15px 0;
+    margin:40px auto 0;
+    background: transparent url('../../img/button.png') no-repeat scroll left top;
+    text-shadow:1px 1px 1px rgba(255,255,255,.76);
+}

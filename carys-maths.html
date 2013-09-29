@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Carys Mathcs</title>
+	<meta name="author" content="Tom Morgan">
+	<style type="text/css" media="screen">
+	   .hidden {display:none;}
+	   * {margin:0px;padding:0px;font-size:150%;font-family:sans-serif;}
+	   p {
+	       margin-bottom:0.5em;
+	   }
+	   #main {
+	       width:1000px;
+	       margin:20px auto;
+	   }
+	   input {
+	       width:100%;
+	   }
+	   .red {color:red;}
+	   .grn {color:green;}
+	   button {
+	       font-size:100%;
+	       padding:20px;
+	       text-transform:uppercase;
+	       font-weight:bold;
+	       cursor:pointer;
+	   }
+	   #score {
+	       float:right;
+	   }
+	</style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        
+        $(function()
+        {
+            var number, divisor, answer, score = 0;
+            
+            function startAgain()
+            {
+                number = 2 * Math.ceil((Math.random() * 50));
+                divisor = 2;                        
+                answer = number/divisor;
+            
+                var format = "What is %n% divided by %d%?";
+                format = format.replace('%n%', number);
+                format = format.replace('%d%', divisor);
+                $('#question').html(format);                
+            }
+            
+            $('#answer').keyup(function()
+            {
+                var val = parseInt($(this).val(),10);
+                console.log(val);
+                if (val == answer)
+                {
+                    $('#feedback').fadeIn().html('Well done!').addClass('grn').removeClass('red');
+                    $('#again').fadeIn();
+                } else {
+                    $('#feedback').fadeIn().html('Not quite! Keep trying').addClass('red').removeClass('grn');
+                }
+            }).focus();
+            
+            $('#again').click(function(e)
+            {
+                e.preventDefault();
+                $('#answer').val('').focus();
+                $('#feedback').fadeOut();
+                $('#again').fadeOut();
+                startAgain();
+                score++;
+                $("#score").html(score);
+            });
+            
+            startAgain();        
+        });        
+    </script>
+</head>
+<body>
+    <div id="main">
+        <p id="question"></p>
+        <p><input type="text" id="answer" value="" /></p>
+        <p id="score">0</p>
+        <p id="feedback" class="red hidden"></p>
+        <button id="again" class="hidden">try again?</button>    
+    </div>
+</body>
+</html>
