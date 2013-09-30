@@ -2,7 +2,7 @@
     position:relative;
     margin:20px auto 0;
     padding:0;
-    background: transparent url('../../img/texture.jpg') repeat scroll left top;
+    background: transparent url('../img/texture.jpg') repeat scroll left top;
     width:768px;
     height:1004px;
     overflow:hidden;
@@ -157,7 +157,7 @@
     position:absolute;
     bottom:15px;right:15px;
     width:60px;height:20px;
-    background: transparent url('../../img/settings.png') no-repeat scroll center top;
+    background: transparent url('../img/settings.png') no-repeat scroll center top;
     
     text-align:center;
     font-size:0.45em;
@@ -212,6 +212,6 @@
     height:30px;
     padding:15px 0;
     margin:40px auto 0;
-    background: transparent url('../../img/button.png') no-repeat scroll left top;
+    background: transparent url('../img/button.png') no-repeat scroll left top;
     text-shadow:1px 1px 1px rgba(255,255,255,.76);
 }
