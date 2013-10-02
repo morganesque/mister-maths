@@ -34,10 +34,10 @@
 @import "_7helpers.scss" ;      // These classes override all other styles (error states, content hiders etc).
 
 .debug {
+    display:none;
     position:fixed;
     top:20px;
-    right:0px;
-    display:block;
+    right:0px;    
     background:black;
     color:white;
     padding:10px;
