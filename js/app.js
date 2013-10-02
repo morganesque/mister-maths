@@ -70,7 +70,7 @@ var game = ( function()
                     break;           
                     
                 case "div":
-                    number = 1 + table * Math.floor(Math.random()*12);
+                    number = table * (1 + Math.floor(Math.random()*12));
                     divisor = table;
                     answer = number / divisor;
                     break;                             
