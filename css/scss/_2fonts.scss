@@ -1,6 +1,14 @@
-html {
+html,body {
     font-size:16px;
-    line-height:1.5em;
+    line-height:1.3em;
+    font-family: 'Loved by the King', sans-serif;
+    font-weight: 400;
+}
+
+.answer,
+.numbers .option,
+.operations .option,
+.keyboard .key {
     font-family: 'Days One', sans-serif;
 }
 

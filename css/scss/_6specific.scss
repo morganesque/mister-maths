@@ -64,22 +64,30 @@
 .score {
     float:right;
     padding:0.5em;
+    font-family:monospace;
+}
+
+.time {
+    float:left;
+    padding:0.5em;
+    font-family:monospace;
 }
 
 .question {
     text-align:center;
     margin-bottom:1em;
-    white-space:nowrap;    
+    white-space:nowrap;  
+    font-size:1.2em;  
 }
 .answer {
     font-size:4em;
-    width:3em;
+    width:60%;
     height:1em;
     background:white;
     border:1px solid rgba(0,0,0,0.42);;
-    margin:0 159px;
-    padding:0.12em 0.25em;
+    margin:0 auto;
     letter-spacing:0.1em;
+    line-height:1em;
     text-align:center;
     @include border-radius(5px);
 }
@@ -151,6 +159,7 @@
     position:absolute;
     top:380px;
     left:0px;
+    width:100%;
 }
 .save,
 .cog {
@@ -160,8 +169,10 @@
     background: transparent url('../img/settings.png') no-repeat scroll center top;
     
     text-align:center;
+    font-family:"Days One";
     font-size:0.45em;
     padding:60px 10px 0px;
+    line-height:1em;
     
     @include border-radius(15px);
 }
@@ -190,28 +201,37 @@
 .welcome {
     position:absolute;
     left:197px;
-    top:40px;
+    top:60px;
     width:374px;
     height:312px;
     font-size:0.8em;
     text-align:center;
     
+    .name {
+        font-size:2em;
+        margin-bottom:0.5em;
+    }
+
     p {
         color:#666;
         
         &.head {
             color:black;
             text-transform:uppercase;
-            margin-bottom:0.75em;
+            margin-bottom:0.25em;
+            letter-spacing:0.2em;
         }
     }
 }
+
 #start-button {
     display:block;
     width:120px;
     height:30px;
-    padding:15px 0;
-    margin:40px auto 0;
+    padding:10px 0 20px;
+    margin:10px auto 0;
     background: transparent url('../img/button.png') no-repeat scroll left top;
     text-shadow:1px 1px 1px rgba(255,255,255,.76);
+    text-transform:uppercase;
+    letter-spacing:0.1em;
 }
