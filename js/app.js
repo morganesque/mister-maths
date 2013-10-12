@@ -4,10 +4,9 @@ var clickEvent; // to distinguish between mouse and touch.
 
 var chshow = 1;     // used to keep track of showing character.
     
-
-
 $(document).on('ready',function()
-{    
+{   
+    console.log('app.js ready!'); 
     clickEvent = (Modernizr.touch) ? 'touchstart' : 'click' ; // decide between mouse and touch.
     
     $('#again').on(clickEvent, function(e)
@@ -82,12 +81,14 @@ $(document).on('ready',function()
     {   
         $('#game').fadeOut(); 
         $('#save').fadeIn();
+        $(this).fadeOut();
     });
     
     $('#save').hide().on(clickEvent, function()
     {
         $('#game').fadeIn(); 
-        $('#save').fadeOut();
+        $('#cog').fadeIn(); 
+        $(this).fadeOut();
         game.startAgain();
     });
     

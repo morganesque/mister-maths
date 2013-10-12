@@ -22,11 +22,15 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
-    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="//use.typekit.net/wfx0uok.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'> -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'> -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'> -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Delius+Unicase:400,700' rel='stylesheet' type='text/css'> -->
-    <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 </head>
 <body>
@@ -52,11 +56,19 @@
             <a class="option chosen" href="#" data-operation="mul">&#215;</a>                
             <a class="option" href="#" data-operation="div">&#247;</a>
         </div><!-- .numbers -->
-        <a href="#" id="save" class="save">save</a><!-- .save -->
-    </div><!-- .settings -->
+        <div class="instructions">
+            <div class="name">Mister Maths</div>
+            <p class="head">Instructions</p>
+            <p>Use the controls on either side to control what kind of quesitons you'll get.</p>
+            <p>A question will appear below. Use the numbers to type the answer. Then click the green button for another question</p>
+            <a id="start-button" href="#">start</a>
+        </div>
+        
+    </div><!-- .settings -->    
     
     <div id="game" class="pane">
 
+        <!-- The drawings of Mister Maths -->
         <div class="characters">
             <div class="char1"></div><!-- .char1 -->
             <div class="char2"></div><!-- .char2 -->
@@ -85,14 +97,8 @@
             <p id="answer" class="answer"></p>            
         </div><!-- .qa -->
         
-        <div class="welcome">
-            <div class="name">Mister Maths</div>
-            <p class="head">instructions</p>
-            <p>A question will appear below. Use the numbers to type the answer. Then click the green button for another question</p>
-            <a id="start-button" href="#">start</a>
-        </div><!-- .welcome -->
         
-        <p class="score"><span id="score">0</span></p>
+                
         <p class="time"><span id="time">0:00</span></p>
         
         <p id="feedback" class="feedback red hidden"></p>
@@ -111,9 +117,15 @@
             --><a href="#" class="key" id="zer">0</a><!-- .key
             --><a href="#" class="key" id="del">&lt;</a><!-- .key -->
         </div><!-- .keyboard -->
-        
-        <a href="#" id="cog" class="cog">settings</a><!-- .help -->
+            
     </div><!-- .game -->
+
+    <div id="bottom-right">
+        <p class="item num answered"><span id="answered">0</span><br />answers</p>
+        <p class="item num score"><span id="score">0</span><br />score</p>
+        <a class="item button cog" href="#" id="cog">settings</a><!-- .help -->
+        <a class="item button save" href="#" id="save">save</a><!-- .save -->
+    </div>
     
 </div><!-- .ipad -->   
 
@@ -131,7 +143,6 @@
 <script type="text/javascript" src="js/orientation_error.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-
 
 <!-- <script>
 var _gaq = _gaq || [];

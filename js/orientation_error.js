@@ -1,4 +1,4 @@
-$('document').on('ready',function()
+$(document).on('ready',function()
 {
     var OrientationError = function()
     {
@@ -15,3 +15,4 @@ $('document').on('ready',function()
     $(window).on('orientationchange',function(e){OrientationError();});
     OrientationError();     
 });
+

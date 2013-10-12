@@ -116,10 +116,10 @@ var game = ( function()
                 console.log('stopping timer');
                 endTime = new Date();
                 timeScore = Math.max(0 , 5 - Math.floor((endTime - startTime)/1000));
-                console.log((endTime - startTime));
-                console.log((endTime - startTime)/1000);
-                console.log(Math.floor((endTime - startTime)/1000));
-                console.log(timeScore);
+                // console.log((endTime - startTime));
+                // console.log((endTime - startTime)/1000);
+                // console.log(Math.floor((endTime - startTime)/1000));
+                // console.log(timeScore);
             } else {
                 $('#feedback').fadeIn().html('Not quite! Keep trying').addClass('red').removeClass('grn');
                 $('.again').css({visibility:'hidden'});
@@ -165,8 +165,14 @@ var game = ( function()
         ,incrementScore: function()
         {
             this.number++;
-            this.score+=timeScore;
-            $("#score").html(this.score+' / '+this.number);
+            this.score += timeScore;
+
+            var displayScore = Math.round(30 * (this.score / this.number));
+            console.log(this.score / this.number);
+            console.log(100 * (this.score / this.number));
+
+            $("#score").html(displayScore);
+            $("#answered").html(this.number);
         }
         
     }; // end of return.
