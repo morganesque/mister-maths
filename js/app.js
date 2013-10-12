@@ -6,6 +6,8 @@ var chshow = 1;     // used to keep track of showing character.
     
 $(document).on('ready',function()
 {   
+    $('#game').hide();
+
     console.log('app.js ready!'); 
     clickEvent = (Modernizr.touch) ? 'touchstart' : 'click' ; // decide between mouse and touch.
     
@@ -100,6 +102,9 @@ $(document).on('ready',function()
     $("#start-button").on(clickEvent, function(e)
     {
         e.preventDefault();
+
+        $('.instructions').fadeOut();
+        $('#game').fadeIn();
                 
         $('.characters > div').css({opacity:0});
         $('.characters .char1').css({opacity:1, top:300}).addClass('showing');
